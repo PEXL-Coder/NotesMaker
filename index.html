@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call Notes Maker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grid-container">
+    <!-- ==================== SIDEBAR ==================== -->
+    <nav class="sidebar">
+        <h1>Call Notes Maker</h1>
+        <div class="departments">
+            <details open>
+                <summary>Support Department</summary>
+                <ul>
+                    <li><a href="#support-billing">Billing Issue</a></li>
+                    <li><a href="#support-technical">Technical Issue</a></li>
+                    <li><a href="#support-general">General Inquiry</a></li>
+                </ul>
+            </details>
+
+            <details>
+                <summary>Sales Department</summary>
+                <ul>
+                    <li><a href="#sales-new">New Sale</a></li>
+                    <li><a href="#sales-upsell">Upsell / Cross-sell</a></li>
+                    <li><a href="#sales-followup">Follow-up Call</a></li>
+                </ul>
+            </details>
+
+            <details>
+                <summary>Retention Department</summary>
+                <ul>
+                    <li><a href="#retention-cancellation">Cancellation Request</a></li>
+                    <li><a href="#retention-complaint">Complaint / Save Attempt</a></li>
+                </ul>
+            </details>
+
+            <!-- Add more departments / call types here -->
+        </div>
+    </nav>
+
+    <!-- ==================== FORM AREA ==================== -->
+    <main class="form-area">
+        <section id="support-billing" class="template">
+            <h2>Billing Issue – Call Notes</h2>
+            <div class="fields">
+                <div class="field">
+                    <label>Customer Name:</label>
+                    <input type="text" placeholder="Enter customer name">
+                </div>
+                <div class="field">
+                    <label>Account / Reference:</label>
+                    <input type="text" placeholder="Account or reference number">
+                </div>
+                <div class="field">
+                    <label>Issue:</label>
+                    <select>
+                        <option value="">-- Select issue --</option>
+                        <option>Incorrect charge</option>
+                        <option>Late payment fee</option>
+                        <option>Refund request</option>
+                        <option>Payment method update</option>
+                        <option>Other billing query</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label>Customer Mood:</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="mood"> Calm / Cooperative</label>
+                        <label><input type="radio" name="mood"> Frustrated</label>
+                        <label><input type="radio" name="mood"> Angry / Abusive</label>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Resolution:</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="res"> Resolved – Credit issued</label>
+                        <label><input type="radio" name="res"> Resolved – Explanation given</label>
+                        <label><input type="radio" name="res"> Escalated to Billing Supervisor</label>
+                        <label><input type="radio" name="res"> Refund processed</label>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Additional Notes:</label>
+                    <textarea class="additional" rows="6" placeholder="Any extra details..."></textarea>
+                </div>
+            </div>
+        </section>
+
+        <section id="support-technical" class="template">
+            <h2>Technical Issue – Call Notes</h2>
+            <div class="fields">
+                <div class="field">
+                    <label>Customer Name:</label>
+                    <input type="text">
+                </div>
+                <div class="field">
+                    <label>Issue Reported:</label>
+                    <select>
+                        <option value="">-- Select --</option>
+                        <option>Login issues</option>
+                        <option>Slow performance</option>
+                        <option>Error message (note below)</option>
+                        <option>App crash</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label>Troubleshooting Performed:</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox"> Restarted device</label>
+                        <label><input type="checkbox"> Cleared cache / cookies</label>
+                        <label><input type="checkbox"> Re-installed application</label>
+                        <label><input type="checkbox"> Checked network</label>
+                        <label><input type="checkbox"> Ran diagnostics</label>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Outcome:</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="outcome"> Resolved on call</label>
+                        <label><input type="radio" name="outcome"> Ticket created – ETA provided</label>
+                        <label><input type="radio" name="outcome"> Escalated to Tier 2</label>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Additional Notes:</label>
+                    <textarea class="additional" rows="6"></textarea>
+                </div>
+            </div>
+        </section>
+
+        <!-- Add as many more sections as you need – just copy the pattern above -->
+
+        <section id="sales-new" class="template">
+            <h2>New Sale – Call Notes</h2>
+            <div class="fields">
+                <div class="field">
+                    <label>Customer Name:</label>
+                    <input type="text">
+                </div>
+                <div class="field">
+                    <label>Product Interested In:</label>
+                    <select>
+                        <option value="">-- Select --</option>
+                        <option>Product A</option>
+                        <option>Product B</option>
+                        <option>Bundle Package</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label>Objections Raised:</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox"> Price too high</label>
+                        <label><input type="checkbox"> Needs to think about it</label>
+                        <label><input type="checkbox"> Comparing with competitor</label>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Call Outcome:</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="saleout"> Sale completed</label>
+                        <label><input type="radio" name="saleout"> Follow-up scheduled</label>
+                        <label><input type="radio" name="saleout"> Not interested</label>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Additional Notes:</label>
+                    <textarea class="additional" rows="6"></textarea>
+                </div>
+            </div>
+        </section>
+
+        <!-- More templates … -->
+
+    </main>
+
+    <!-- ==================== OUTPUT AREA ==================== -->
+    <div class="output-area">
+        <h2>Generated Notes (copy & paste)</h2>
+        <textarea id="output" readonly placeholder="Select a call type from the sidebar → fill the form → notes appear here automatically"></textarea>
+        <button id="copy-button">Copy to Clipboard</button>
+        <p id="copy-feedback">Copied to clipboard!</p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
